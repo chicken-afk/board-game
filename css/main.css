@@ -6,13 +6,13 @@
 
 :root {
     --card-height: 65vh;
-    --card-width: calc(var(--card-height) / 1.5);
+    --card-width: calc(var(--card-height) / 1.8);
   }
   
   
   body {
-    min-height: 100vh;
-    background: #f8f8f8;
+    min-height: 90vh;
+    background: #f3e3f0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -27,10 +27,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* background-color: #cccccc; */
     width: var(--card-width);
     height: var(--card-height);
-    padding: 3px;
+    padding: 1px;
     position: relative;
     border-radius: 6px;
     justify-content: center;
@@ -41,15 +40,6 @@
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
     font-family: cursive;
-  }
-  
-  .card:hover {
-    color: rgb(88 199 250 / 100%);
-    transition: color 1s;
-  }
-  .card:hover:before, .card:hover:after {
-    animation: none;
-    opacity: 0;
   }
   
   
@@ -69,7 +59,6 @@
   }
   
   .card::after {
-    background: url("ss");
     background: #191c29;
     position: absolute;
     content: "";
@@ -89,6 +78,105 @@
     transition: opacity .5s;
     animation: spin 2.5s linear infinite;
   }
+
+  /* .card:hover {
+    background: #fcdbeb;
+    color: rgb(17, 143, 201);
+    transition: color 2s;
+  }
+  .card:hover:before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #1562fa , #09d8f8  43%, #5219d6);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 3s linear infinite;
+  }
+  .card:hover:after {
+    background: #191c29;
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #1562fa , #09d8f8  43%, #5219d6);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  } */
+
+  .card-after {
+    background: url("../images/cute-couple-6971070_1280.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 1px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+    background: #fcdbeb;
+    color: rgb(17, 143, 201);
+    transition: color 2s;
+  }
+
+  .card-after::after {
+    background: #191c29;
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #1562fa , #09d8f8  43%, #5219d6);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+
+  .card-before::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #1562fa , #09d8f8  43%, #5219d6);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 3s linear infinite;
+  }
   
   @keyframes spin {
     0% {
@@ -100,7 +188,7 @@
   }
   
   a {
-    color: #0d122c;
+    color: #0c4e6d;
     text-decoration: none;
     font-family: sans-serif;
     font-weight: bold;
