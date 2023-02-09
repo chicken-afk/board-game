@@ -17,9 +17,14 @@
     <a>Tap Kartu Untuk Membuka</a>
     
     <script>
+        function hasClass(element, className) {
+            return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+        }
+
         function changeCss(){
-            $("#card").removeClass("card");
-            $("#card").addClass("card-after");
+            console.log('css')     
+                $("#card").removeClass("card");
+                $("#card").addClass("card-after");
         }
     </script>
 </body>
