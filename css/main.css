@@ -79,45 +79,21 @@
     animation: spin 2.5s linear infinite;
   }
 
-  /* .card:hover {
-    background: #fcdbeb;
-    color: rgb(17, 143, 201);
-    transition: color 2s;
-  }
-  .card:hover:before {
-    content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(
-      var(--rotate)
-      , #1562fa , #09d8f8  43%, #5219d6);
-      position: absolute;
-      z-index: -1;
-      top: -1%;
-      left: -2%;
-      animation: spin 3s linear infinite;
-  }
-  .card:hover:after {
-    background: #191c29;
+  .title-card {
+    font-family: 'Poppins', sans-serif;
+    color: #e589de  ;
     position: absolute;
-    content: "";
-    top: calc(var(--card-height) / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(
-      var(--rotate)
-      , #1562fa , #09d8f8  43%, #5219d6);
-      opacity: 1;
-    transition: opacity .5s;
-    animation: spin 2.5s linear infinite;
-  } */
+    top: 8px;
+    left: 11px;
+    z-index: 1;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-shadow: 
+    1px 1px #1c1b29, 2px 2px #1c1b29,
+    3px 3px #5999da, 4px 4px #95999d;
+    /* 5px 5px #4b1952, 6px 6px #95999d; */
+  }
 
   .card-after {
     background: url("../images/cute-couple-6971070_1280.webp");
