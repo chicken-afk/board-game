@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/card-list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <section class="cards">
+      <div class="question-text title-text">Pick A Card!</div>
+        <div class="owl-wrapper">
+          <div class="loop owl-carousel owl-theme">
+            
+            <a href="couple.html">
+              <div id="card" class="card" style="font-family: 'sans-serif'; font-size: medium;" onclick="generateQustion()">
+              </div>
+            </a>
+            <a href="married.html">
+              <div id="card" class="background-married card" style="font-family: 'sans-serif'; font-size: medium;" onclick="generateQustion()">
+              </div>
+            </a>
+
+            <a href="crush.html">
+              <div id="card" class="card background-crush" style="font-family: 'sans-serif'; font-size: medium; " onclick="generateQustion()">
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </section>
+
+      <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+        var $owl = $(".loop");
+  
+        $owl.owlCarousel({
+            autoplay: false,
+            autoplayHoverPause: false,
+            center: true,
+            items: 1.4,
+            stagePadding: 15,
+            loop: true,
+            margin: 15,
+            animateOut: 'slide-up',
+            animateIn: 'slide-down',
+            smartSpeed: 1950
+        });
+  
+      </script>
+ 
+</body>
+</html>

@@ -12,21 +12,22 @@
   
   body {
     min-height: 90vh;
-    background: #f3e3f0;
+    background: #ffb8f2;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 2rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
   
   
   .card {
-    background: url("../images/cute-couple-6971070_1280.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     width: var(--card-width);
     height: var(--card-height);
     padding: 1px;
@@ -36,146 +37,66 @@
     align-items: center;
     text-align: center;
     display: flex;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
-    cursor: pointer;
-    font-family: cursive;
+    animation: myAnim 1s cubic-bezier(0.5, 0, 0.75, 0) 0s 1 normal none;
   }
+  @keyframes myAnim {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateY(-250px);
+    }
   
+    38% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0);
+    }
   
-  .card::before {
-    content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(
-      var(--rotate)
-      , #1562fa , #09d8f8  43%, #5219d6);
-      position: absolute;
-      z-index: -1;
-      top: -1%;
-      left: -2%;
-      animation: spin 2.5s linear infinite;
-  }
+    55% {
+      animation-timing-function: ease-in;
+      transform: translateY(-65px);
+    }
   
-  .card::after {
-    background: #191c29;
+    72% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    81% {
+      animation-timing-function: ease-in;
+      transform: translateY(-28px);
+    }
+  
+    90% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    95% {
+      animation-timing-function: ease-in;
+      transform: translateY(-8px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  }
+
+  .title-card {
+    font-family: 'Poppins', sans-serif;
+    color: #e589de  ;
     position: absolute;
-    content: "";
-    top: calc(var(--card-height) / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(
-      var(--rotate)
-      , #1562fa , #09d8f8  43%, #5219d6);
-      opacity: 1;
-    transition: opacity .5s;
-    animation: spin 2.5s linear infinite;
-  }
-
-  /* .card:hover {
-    background: #fcdbeb;
-    color: rgb(17, 143, 201);
-    transition: color 2s;
-  }
-  .card:hover:before {
-    content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(
-      var(--rotate)
-      , #1562fa , #09d8f8  43%, #5219d6);
-      position: absolute;
-      z-index: -1;
-      top: -1%;
-      left: -2%;
-      animation: spin 3s linear infinite;
-  }
-  .card:hover:after {
-    background: #191c29;
-    position: absolute;
-    content: "";
-    top: calc(var(--card-height) / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(
-      var(--rotate)
-      , #1562fa , #09d8f8  43%, #5219d6);
-      opacity: 1;
-    transition: opacity .5s;
-    animation: spin 2.5s linear infinite;
-  } */
-
-  .card-after {
-    background: url("../images/cute-couple-6971070_1280.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: var(--card-width);
-    height: var(--card-height);
-    padding: 1px;
-    position: relative;
-    border-radius: 6px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
-    cursor: pointer;
-    font-family: cursive;
-    background: #fcdbeb;
-    color: rgb(17, 143, 201);
-    transition: color 2s;
-  }
-
-  .card-after::after {
-    background: #191c29;
-    position: absolute;
-    content: "";
-    top: calc(var(--card-height) / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(
-      var(--rotate)
-      , #1562fa , #09d8f8  43%, #5219d6);
-      opacity: 1;
-    transition: opacity .5s;
-    animation: spin 2.5s linear infinite;
-  }
-
-  .card-before::before {
-    content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(
-      var(--rotate)
-      , #1562fa , #09d8f8  43%, #5219d6);
-      position: absolute;
-      z-index: -1;
-      top: -1%;
-      left: -2%;
-      animation: spin 3s linear infinite;
+    top: 8px;
+    left: 11px;
+    z-index: 1;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-shadow: 
+    1px 1px #1c1b29, 2px 2px #1c1b29,
+    3px 3px #5999da, 4px 4px #95999d;
+    /* 5px 5px #4b1952, 6px 6px #95999d; */
   }
   
   @keyframes spin {
@@ -194,3 +115,41 @@
     font-weight: bold;
     margin-top: 2rem;
   }
+
+.card .frente{
+    position:absolute;
+      transform:  rotateY(0deg);
+    backface-visibility:hidden;
+    transition: transform .4s linear;	
+  }
+
+.card .fundo{
+    position:absolute;
+    transform: rotateY(180deg);
+    backface-visibility:hidden;
+    transition: transform .4s linear;
+  }
+.card:hover  .frente{
+    transform:  rotateY(-180deg);
+    cursor:pointer;
+  }
+.card:hover  .fundo{
+    transform:  rotateY(0deg);
+    cursor:pointer;
+  }
+.card img{
+    width:100%;
+    border-radius: 10px;
+    box-shadow: 1px 5px 34px 3px #000000;
+}
+
+.question-text {
+  font-family: 'cursive';
+  font-size: medium;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  word-break: break-word;
+  line-height: 1.2;
+}
