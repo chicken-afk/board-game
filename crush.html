@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <link href="./css/main.css" rel="stylesheet">
+       <!--Google Font-->
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Crush Card</title>
+</head>
+<body>
+    <a href="home.html">
+    <img style="
+    margin-top: 20px; height: 29px; width: 29px;
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    " src="images/icons8-back-arrow-64.png" alt="" onclick="reloadWindow()">
+    </a>
+
+    <a style="margin : 0px 0px 10px 0px">Tap Kartu Untuk Membuka</a>
+    <div class="card">
+        <div class="fundo">
+            <img src="images/4.png" alt="">
+            <div id="question" class="question-text">
+            </div>
+        </div>
+        <div class="frente">
+            <img src="images/3.png" alt="">
+        </div>
+    </div>
+    <img style="
+    margin-top: 20px; height: 70px; width: 70px;
+    " src="images/icons8-reset-100.png" alt="" onclick="reloadWindow()">
+    <a style="margin : 10px 0px 10px 0px; font-size: 15px;">Tekan icon untuk mengganti kartu</a>
+
+    <script>
+
+        function reloadQuestion() {
+            var data = [
+                "Apa alasan yang bikin kamu tertarik denganku?",
+                "Apa kenangan yang paling kamu ingat saat kecil?",
+                "Jika kamu bisa mengubah sesuatu, apa yang ingin kamu perbaiki?",
+                "Rencana karirmu untuk masa depan seperti apa?",
+                "Apa yang membuat kamu bersyukur dalam hidup?",
+                "Bagaimana definisi hubungan yang sehat buat kamu?",
+                "Apa hal favorit yang kamu suka dari aku?",
+                "Apa kamu menyukai pekerjaanmu sekarang?"
+            ];
+            var n = data.length;
+            var random = Math.floor(Math.random() * n);
+            console.log(random)
+            $("#question").html(data[random])
+
+        }
+        reloadQuestion()
+        // <!--./index.js-->
+        function reloadWindow() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
