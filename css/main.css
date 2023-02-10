@@ -12,7 +12,8 @@
   
   body {
     min-height: 90vh;
-    background: #ffb8f2;
+    /* background: #ffb8f2; */
+    background: #dbe1ff;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -144,12 +145,25 @@
 }
 
 .question-text {
-  font-family: 'cursive';
+  font-family: cursive;
   font-size: medium;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   word-break: break-word;
-  line-height: 1.2;
+  line-height: 1.5;
+  /* font-variant-caps: petite-caps; */
 }
+
+/* .question-text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  word-break: break-word;
+  line-height: 1.2;
+  text-align: left;
+} */

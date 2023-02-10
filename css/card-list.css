@@ -54,6 +54,7 @@ html {
   background-image: linear-gradient(-225deg,#3498db 0,#9b59b6 29%,#e74c3c 67%,#f1c40f 100%);
   background-size: 500% 500%;
   animation: bg 8s linear infinite;
+  background: #dbe1ff;
 }
 
 @keyframes bg {
@@ -175,7 +176,8 @@ html {
 }
 
 .card {
-    background: url("../images/2.png");
+    /* background: url("../images/2.png"); */
+    background: url("../images/7.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -196,14 +198,16 @@ html {
   }
 
   .background-married {
-    background: url("../images/1.png");
+    /* background: url("../images/1.png"); */
+    background: url("../images/7.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .background-crush {
-    background: url("../images/3.png");
+    /* background: url("../images/3.png"); */
+    background: url("../images/9.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
